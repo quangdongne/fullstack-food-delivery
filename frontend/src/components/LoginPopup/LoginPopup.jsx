@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { assets } from "../../assets/assets";
 import { StoreContext } from "../../context/StoreContext";
 import "./LoginPopup.css";

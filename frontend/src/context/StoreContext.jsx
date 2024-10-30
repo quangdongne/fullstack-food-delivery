@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { createContext, useEffect } from "react";
 
 import { useState } from "react";
@@ -44,6 +45,7 @@ const StoreContextProvider = (props) => {
     return totalAmount;
   };
   //food_list
+  
   const fetchFoodList = async() =>{
     const response = await axios.get(url+'/api/food/list')
     setFoodList(response.data.data)
@@ -73,7 +75,7 @@ const StoreContextProvider = (props) => {
     token,
   };
   return (
-    <StoreContext.Provider value={contextValue}>
+    <StoreContext.Provider value={contextValue}>  
       {props.children}
     </StoreContext.Provider>
   );
